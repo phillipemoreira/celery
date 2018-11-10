@@ -44,6 +44,22 @@ $ make install
 
 ## Running
 
+Celery requires a message broker and this project uses [RabbitMQ](http://www.rabbitmq.com/) (celery's default), but it does not require you to install in your host machine, it creates a docker container defined in the docker-compose configuration file. Therefore you are going to need to terminal instances, one for running the message broker, and another one for running the celery project itself.
+
+#### RabbitMQ
+
+On the first terminal instance:
+
+```bash
+$ docker-compose up
+```
+
+This will pull the docker image, setup and start a [RabbitMQ](http://www.rabbitmq.com/) Server.
+
+#### Celery
+
+on the second terminal instance:
+
 **TODO**
 
 ## Testing
